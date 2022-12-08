@@ -83,8 +83,8 @@ Vagrant.configure("2") do |config|
     mkfs.ext4 /dev/vg00/lv2
     mkdir /mnt/vol1 /mnt/vol2
     
-    echo '/dev/vg00/lv1 /mnt/vol1 ext4 defaults 0 100' >>/etc/fstab
-    echo '/dev/vg00/lv2 /mnt/vol2 ext4 defaults 0 100' >>/etc/fstab
+    echo '/dev/vg00/lv1 /mnt/vol1 ext4 defaults 0 0' >>/etc/fstab
+    echo '/dev/vg00/lv2 /mnt/vol2 ext4 defaults 0 0' >>/etc/fstab
     mount -a
   SHELL
   
