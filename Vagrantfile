@@ -77,7 +77,7 @@ Vagrant.configure("2") do |config|
     pvcreate /dev/sdc /dev/sdd /dev/sde /dev/sdf
     vgcreate vg00 /dev/sdc /dev/sdd /dev/sde /dev/sdf
   
-    lvcreate -l 100%FREE vg00 /dev/sdc /dev/sdd -n lv1
+    lvcreate -l 100%FREE vg00 /dev/sdc /dev/sde -n lv1
     lvcreate -l 100%FREE vg00 /dev/sde /dev/sdf -n lv2
     mkfs.ext4 /dev/vg00/lv1  
     mkfs.ext4 /dev/vg00/lv2
